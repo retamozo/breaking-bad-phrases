@@ -1,12 +1,13 @@
 import React from "react";
 import { Button } from "../../assets/styled";
+import { getRandomNumber } from "../../modules/helper";
 
 const ButtonRequest = ({ title, setRandomQuoteId }) => {
-  const handleAleatoryId = (max, min) => {
-    let id = Math.round(Math.random() * (max - min) + min);
+  const handleAleatoryId = () => {
+    let id = getRandomNumber(0, 69);
     setRandomQuoteId(id);
   };
-  return <Button onClick={() => handleAleatoryId(1, 102)}>{title}</Button>;
+  return <Button onClick={handleAleatoryId}>{title}</Button>;
 };
 
 export default ButtonRequest;

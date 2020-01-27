@@ -1,13 +1,13 @@
 import React from "react";
+import { ContainerPhrase } from "../../assets/styled";
 
 const PhraseBox = ({ infoQuote }) => {
-  const { author, quote, quote_id } = infoQuote;
+  const { author, quote } = infoQuote;
   return (
-    <div>
+    <ContainerPhrase>
       <h1>{author}</h1>
       <p>{quote}</p>
-      <span>{quote_id}</span>
-    </div>
+    </ContainerPhrase>
   );
 };
 
